@@ -20,4 +20,4 @@ gulp.task('watch', () => {
 
 gulp.task('build', sequence('prepare', 'distribute'));
 
-gulp.task('default', [ 'prepare', 'watch' ]);
+gulp.task('default', [ 'prepare', 'watch', 'serve' ]);
