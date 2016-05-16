@@ -9,7 +9,7 @@
         .run(Run)
     );
 
-    function Configure($stateProvider, $urlRouterProvider) {
+    function Configure($stateProvider, $urlRouterProvider, $locationProvider) {
 
         $stateProvider.state('home', {
             url: '/',
@@ -22,6 +22,7 @@
         });
 
         $urlRouterProvider.otherwise('/');
+        $locationProvider.html5Mode(true);
     }
 
     function Run() {}
