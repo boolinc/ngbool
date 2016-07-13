@@ -1,4 +1,14 @@
 .DS_Store
+<<<<<<< HEAD
 dist
 node_modules
 app/lib
+=======
+Thumbs.db
+
+*.log
+node_modules
+
+dev
+src/script/templates
+>>>>>>> e36941cf24b48488c43380f09df3467120f9f434
