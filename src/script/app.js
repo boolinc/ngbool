@@ -4,7 +4,7 @@
     (angular
         .module('eCV', [
             'eCV.auth',
-            'ui.router', 'ngMaterial', 'templates'
+            'ngMaterial', 'templates'
         ])
         .config(configure)
         .run(run)
@@ -18,12 +18,6 @@
     run.$inject = ['$rootScope', '$state'];
 
     function run($rootScope, $state ) {
-        $rootScope.$on('$stateChangeStart', function(evt, to, params) {
-            if (to.redirectTo) {
-                evt.preventDefault();
-                $state.go(to.redirectTo, params, {location: 'replace'});
-            }
-        });
     }
 
 })();
