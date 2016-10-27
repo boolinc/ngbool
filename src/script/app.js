@@ -2,29 +2,22 @@
     'use strict';
 
     (angular
-        .module('', [
-            'ui.router', 'templates'
+        .module('eCV', [
+            'eCV.auth',
+            'ngMaterial', 'templates'
         ])
-        .config(Configure)
-        .run(Run)
+        .config(configure)
+        .run(run)
     );
 
-    function Configure($stateProvider, $urlRouterProvider, $locationProvider) {
-
-        $stateProvider.state('home', {
-            url: '/',
-            abstract: true,
-            templateUrl: 'views/home.tpl.html'
-        }).state('home.index', {
-            url: '',
-            templateUrl: 'views/home/index.tpl.html',
-            controller: 'IndexCtrl'
-        });
-
+    function configure($stateProvider, $urlRouterProvider, $locationProvider) {
         $urlRouterProvider.otherwise('/');
         $locationProvider.html5Mode(true);
     }
 
-    function Run() {}
+    run.$inject = ['$rootScope', '$state'];
+
+    function run($rootScope, $state ) {
+    }
 
 })();
