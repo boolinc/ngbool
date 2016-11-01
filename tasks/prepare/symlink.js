@@ -5,12 +5,16 @@ module.exports = (gulp) => {
     return () => {
         return (gulp
             .src([
+                'src/fonts',
+                'src/script',
                 'src/styles',
-                'src/script'
+                'src/vendor'
             ], { read: false })
         ).pipe(symlink([
+            'dev/fonts',
+            'dev/script',
             'dev/styles',
-            'dev/script'
+            'dev/vendor'
         ], { force: true }));
 
     };
