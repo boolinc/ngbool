@@ -7,6 +7,7 @@
     "normalize-css": "^4.1.1",
     "angular-material": "^1.0.9",
     "angular-local-storage": "^0.2.7",
-    "jakubzapletal-crypto-js": "^3.1.0"
+    "jakubzapletal-crypto-js": "^3.1.0",
+    "string-formatter": "^0.0.2"
   }
 }
