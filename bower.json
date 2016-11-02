@@ -1,5 +1,5 @@
 {
-  "name": "back-office",
+  "name": "ngbool",
   "private": "true",
   "dependencies": {
     "angular": "^1.5.5",
