@@ -1,9 +1,9 @@
 (function() {
     'use strict';
 
-    angular
-        .module('eCV.auth')
-        .controller('LogoutController', LogoutController);
+    (angular
+        .module('ngbool.auth')
+    ).controller('LogoutController', LogoutController);
 
     LogoutController.$inject = ['Auth', '$state'];
 

@@ -1,20 +1,25 @@
 (function() {
     'use strict';
 
-    angular
-    .module('eCV.auth', [
-        'eCV.shared',
-        'LocalStorageModule', 'ui.router'
-    ])
-    .config(config)
-    .run(run);
+    (angular
+        .module('ngbool.auth', [
+            'ngbool.shared',
+            'LocalStorageModule', 'ui.router'
+        ])
+        .config(config)
+    ).run(run);
 
     function config($stateProvider, $httpProvider) {
         $httpProvider.interceptors.push('HeaderInterceptor');
 
         $stateProvider
-        .state('login', {
-            url: '/',
+        .state('auth', {
+            url: '/auth',
+            abstract: true,
+            template: '<ui-view>'
+        })
+        .state('auth.login', {
+            url: '/login',
             templateUrl: 'views/auth/login.tpl.html',
             controller: 'AuthController',
             controllerAs: 'vm',
@@ -22,7 +27,7 @@
                 role: 4
             }
         })
-        .state('logout',{
+        .state('auth.logout',{
             url: '/logout',
             controller: 'LogoutController'
         });

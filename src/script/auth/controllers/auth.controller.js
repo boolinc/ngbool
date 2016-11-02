@@ -1,9 +1,9 @@
 (function() {
     'use strict';
 
-    angular
-        .module('eCV.auth')
-        .controller('AuthController', AuthController);
+    (angular
+        .module('ngbool.auth')
+    ).controller('AuthController', AuthController);
 
     AuthController.$inject = ['Auth', '$state'];
 

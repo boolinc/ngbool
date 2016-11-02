@@ -4,16 +4,16 @@
     var apiRouter = {
         url: {
             protocol: 'https',
-            host: 'ecv-api.herokuapp.com'
+            host: 'api.example.com'
         },
         route: function(path){
             var url = this.url;
-            return `${url.protocol}://${url.host}/${path}`;
+            return '{0}://{1}/{2}'.format(url.protocol, url.host, path);
         },
         id: function(path){
             var prePath = apiRouter.route(path);
             return function (id) {
-                return `${prePath}/${id}`;
+                return '{0}/{1}'.format(prePath, id);
             };
         }
     };
@@ -26,7 +26,7 @@
     };
 
     (angular
-        .module('eCV.shared')
+        .module('ngbool.shared')
         .constant('api', api)
     );
 

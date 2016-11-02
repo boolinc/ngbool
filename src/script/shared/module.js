@@ -1,16 +1,12 @@
 (function() {
     'use strict';
 
-    angular
-    .module('eCV.shared', [])
-    .config(config)
-    .run(run);
+    (angular
+        .module('ngbool.shared', [])
+        .config(config)
+    ).run(run);
 
-    function config() {
-        
-    }
+    function config() {}
 
-    function run() {
-
-    }
+    function run() {}
 })();

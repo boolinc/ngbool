@@ -2,8 +2,8 @@
     'use strict';
 
     (angular
-        .module('eCV', [
-            'eCV.auth',
+        .module('ngbool', [
+            'ngbool.auth', 'ngbool.user',
             'ngMaterial', 'templates'
         ])
         .config(configure)
@@ -15,9 +15,6 @@
         $locationProvider.html5Mode(true);
     }
 
-    run.$inject = ['$rootScope', '$state'];
-
-    function run($rootScope, $state ) {
-    }
+    function run() {}
 
 })();

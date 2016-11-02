@@ -1,9 +1,9 @@
 (function() {
     'use strict';
 
-    angular
-        .module('eCV.auth')
-        .service('Auth', Auth);
+    (angular
+        .module('ngbool.auth')
+    ).service('Auth', Auth);
 
     Auth.$inject = [
         '$http', '$httpParamSerializerJQLike', 'api', 'headers', 'tokens', 'access', 'localStorageService'

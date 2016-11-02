@@ -1,9 +1,9 @@
 (function() { /* jshint camelcase:false */
     'use strict';
 
-    angular
-    .module('eCV.auth')
-    .factory('HeaderInterceptor', HeaderInterceptor);
+    (angular
+        .module('ngbool.auth')
+    ).factory('HeaderInterceptor', HeaderInterceptor);
 
     HeaderInterceptor.$inject = ['$injector', '$q'];
 
